@@ -6,11 +6,11 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-body{
+body {
     background: #E3F2FD;
 }
 
-.chatbot{
+.chatbot {
     position:fixed;
     right: 40px;
     bottom: 100px;
@@ -22,19 +22,27 @@ body{
                 0 32px 64px -48px rgba(0,0,0,0.5);
 }
 
-.chatbot header{
+.chatbot header {
     background: #DC143C;
     padding: 16px 0;
     text-align: center;
 }
 
-.chatbot header h2{
+.chatbot header h2 {
     color: #fff;
     font-size: 1.4rem;
 }
 
-.chatbot .chatbox{
+.chatbot .chatbox {
     height: 510px;
-    overflow: auto;
+    overflow-y: auto;
     padding: 15px 20px 70px;
+}
+
+.chatbox .chat_incoming {
+    display: flex;
+}
+
+.chatbox .chat p {
+    background: #DC143C;
 }
