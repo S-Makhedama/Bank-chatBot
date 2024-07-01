@@ -10,16 +10,50 @@ body {
     background: #E3F2FD;
 }
 
+.chatbot-toggler{
+    position:fixed;
+    right: 40px;
+    bottom: 1px;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+
+    outline: none;
+    background: #DC143C;
+    border-radius: 50%;
+}
+
+.chatbot-toggler span{
+    position: absolute;
+}
+
+.chatbot-toggler span:last-child{
+    opacity: 0;
+}
+
 .chatbot {
     position:fixed;
     right: 40px;
-    bottom: 30px;
+    bottom: 70px;
     width: 420px;
+    transform: scale(0.5);
+    opacity: 0;
+    pointer-events: none;
     overflow: hidden;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 
                 0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+.show-chatbot .chatbot{
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .chatbot header {
@@ -98,7 +132,15 @@ body {
 }
 
 .chat-input span{
+    align-self: flex-end;
+    height: 55px;
+    line-height: 55px;
     color: #DC143C;
     font-size: 1.3rem;
     cursor: pointer;
+    visibility: hidden;
+}
+
+.chat-input textarea:valid ~ span {
+    visibility: visible;
 }
